@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Advanced FAQ Accordion</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- THEME TOGGLE -->
+<button id="themeToggle" class="theme-btn">🌙 Dark Mode</button>
+
+<div class="container">
+
+    <h1>Frequently Asked Questions</h1>
+
+    <!-- SEARCH -->
+    <input type="text" id="searchInput" placeholder="Search FAQs...">
+
+    <!-- CATEGORY TABS -->
+    <div class="tabs">
+        <button class="tab active" data-category="all">All</button>
+        <button class="tab" data-category="general">General</button>
+        <button class="tab" data-category="account">Account</button>
+        <button class="tab" data-category="technical">Technical</button>
+    </div>
+
+    <!-- FAQ LIST -->
+    <div id="faqList"></div>
+
+</div>
+
+<script src="data.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

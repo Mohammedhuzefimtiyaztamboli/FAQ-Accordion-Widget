@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f2f2ff;
+    min-height: 100vh;
+    padding: 20px;
+    transition: background 0.3s;
+}
+
+body.dark {
+    background: #121212;
+    color: #fff;
+}
+
+.container {
+    max-width: 700px;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    transition: background 0.3s;
+}
+
+body.dark .container {
+    background: #1e1e1e;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* SEARCH */
+#searchInput {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+/* TABS */
+.tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.tab {
+    padding: 8px 14px;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.tab.active {
+    background: #6c63ff;
+    color: white;
+}
+
+/* FAQ ITEM */
+.faq-item {
+    border-radius: 8px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.faq-question {
+    width: 100%;
+    padding: 15px;
+    background: #6c63ff;
+    color: white;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-item.active .faq-question {
+    background: #4b44c9;
+}
+
+.icon {
+    transition: transform 0.3s;
+}
+
+.faq-item.active .icon {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    background: #f4f4ff;
+    transition: max-height 0.4s ease, opacity 0.4s ease;
+    padding: 0 15px;
+}
+
+.faq-item.active .faq-answer {
+    opacity: 1;
+}
+
+.faq-answer p {
+    padding: 15px 0;
+}
+
+/* DARK */
+body.dark .faq-question {
+    background: #3333aa;
+}
+
+body.dark .faq-answer {
+    background: #2a2a2a;
+}
+
+/* THEME BUTTON */
+.theme-btn {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
